@@ -1,5 +1,6 @@
 require(__dirname + '/../aws-credentials.json'); // make sure that file is there before trying anything else
 const AWS = require('aws-sdk');
+process.env.npm_package_url = "https://cse256-sp2021.github.io/information-foraging-vkalil/";
 
 if (
     process.env.npm_package_url === "put your repository's home page url here"
