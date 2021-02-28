@@ -43,6 +43,9 @@
     font-size: 2em;
 }
 
+#right-header{
+    font-size: 2em;
+}
 #column-view {
     display: flex;
 }
