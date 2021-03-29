@@ -1,5 +1,6 @@
 header {
     overflow: auto;
+    text-align: center;
 }
 
 #wustl-branding {
@@ -152,6 +153,6 @@ header a {
 
 .sticky {
     position: fixed;
-    top: 33px;
+    top: 43px;
     width: 100%;
 }
