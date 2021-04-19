@@ -1651,12 +1651,18 @@ exports.PutStudentPageLoadOperationsInsideThisStudentBody = PutStudentPageLoadOp
 function sticky() {
     window.onscroll = function () { myFunction(); };
     // Get the header
+   
     var header = document.getElementById("main-menu-container");
     // Get the offset position of the navbar
     if (header === null) {
         return;
     }
     var sticky = header.offsetTop;
+    var dropdown = document.getElementById("mturk-top-banner-drop-down-content");
+    if(dropdown.offsetHeight > 310){
+        header.classList.add("dropDownHeight");
+        console.log("add start dropdown height")
+      }
     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function myFunction() {
         if (header === null) {
@@ -1664,11 +1670,18 @@ function sticky() {
         }
         console.log("running");
         if (window.pageYOffset > sticky) {
+            header.classList.remove("dropDownHeight");
             header.classList.add("sticky");
             console.log("add sticky");
         }
-        else {
+        console.log(dropdown.offsetHeight);
+        if(dropdown.offsetHeight > 310){
+            header.classList.add("dropDownHeight");
+            console.log("add dropdown height")
+          }
+        else if(window.pageYOffset < sticky) {
             header.classList.remove("sticky");
+            header.classList.remove("dropDownHeight");
             console.log("no need");
         }
     }

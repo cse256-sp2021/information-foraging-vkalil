@@ -3,7 +3,7 @@ export function stickToIt() {
 
   // Get the header
   var header = document.getElementById("main-menu-container");
-
+ var dropdown = document.getElementById("mturk-top-banner-drop-down-content");
   // Get the offset position of the navbar
   var sticky = header.offsetTop;
 
@@ -13,7 +13,13 @@ export function stickToIt() {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
       print("add sticky");
-    } else {
+    } 
+    print("checking dropdown here");
+    if(dropdown.offsetHeight > 320){
+      print("wowowowow");
+    }
+
+    else {
       header.classList.remove("sticky");
       print("no need");
     }
